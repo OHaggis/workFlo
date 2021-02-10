@@ -1,0 +1,22 @@
+Package: workFlo
+Title: Collection of custom made functions
+Version: 0.0.0.1
+Authors@R: 
+    person(given = "Flo",
+           family = "Wiesenhofer",
+           role = c("aut", "cre"),
+           email = "florian.wiesenhofer@medunivienna.ac.at",
+           comment = c(ORCID = "https://orcid.org/0000-0001-6778-7707"))
+Description: What the package does (one paragraph).
+License: `use_mit_license()`, `use_gpl3_license()` or friends to
+    pick a license
+Encoding: UTF-8
+LazyData: false
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Depends: R (>= 4.0.0)
+Imports: 	openxlsx, 
+			PBSmodelling, 
+			eulerr,
+			MASS,
+			ggplot2
