@@ -32,9 +32,6 @@
 #'   xlsxglimpse()
 xlsxglimpse <- function(df) {
   
-  # check type
-  # if(!(is_tibble(df) | is.matrix(df) | is.vector(df) | is.data.frame(df))) stop("Supplied object is of type 'list'. This function works with 'tibble', 'data.frame' and 'matrix' types. Did you mean to specify a subset of the list? e.g. list$object1")
-  
   if(is.matrix(df)) df <- as_tibble(df, rownames = "rownames")
   
   wb <- openxlsx::createWorkbook()
