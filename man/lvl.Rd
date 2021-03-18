@@ -16,7 +16,6 @@ Can be used to get an idea which unique elements a vector contains.
 Does not need to be a factor vector.
 }
 \examples{
-{
 mpg \%>\% 
-  lvl(cyl)}
+  lvl(cyl)
 }

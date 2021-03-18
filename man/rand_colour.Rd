@@ -15,6 +15,5 @@ https://stackoverflow.com/questions/15282580/how-to-generate-a-number-of-most-di
 User: JelenaCuklina
 }
 \examples{
-{ 
-rand_colour(100)}
+rand_colour(100)
 }

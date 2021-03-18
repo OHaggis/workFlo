@@ -8,9 +8,9 @@
 #' @export
 #' @param tb a tibble containing the column of interest
 #' @param column name of the column
-#' @examples {
+#' @examples
 #' mpg %>% 
-#'   lvl(cyl)}
+#'   lvl(cyl)
 lvl <- 
   function(tb, column) {
     lvls <- 
