@@ -14,6 +14,7 @@
 #' @param df|tb, data.frame or tibble to be displayed
 #' @import openxlsx
 #' @import PBSmodelling
+#' @import dplyr
 #' @return no return value
 #' @export
 #' @examples
