@@ -14,6 +14,9 @@ This was adapted from:
 https://stackoverflow.com/questions/15282580/how-to-generate-a-number-of-most-distinctive-colors-in-r
 User: JelenaCuklina
 }
+\details{
+Max. retrieved different colours: 74
+}
 \examples{
 rand_colour(100)
 }
