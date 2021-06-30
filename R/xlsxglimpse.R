@@ -13,7 +13,6 @@
 #'
 #' @param df|tb, data.frame or tibble to be displayed
 #' @import openxlsx
-#' @import PBSmodelling
 #' @import dplyr
 #' @return no return value
 #' @export
@@ -53,6 +52,7 @@ xlsxglimpse <- function(df) {
 
   i <- 1
   filename <- paste(tempdir(),
+                    "\\",
                     format(Sys.Date(), "%g%m%d"),
                     "_temp_",
                     i,
@@ -62,6 +62,7 @@ xlsxglimpse <- function(df) {
   while(file.exists(filename)) {
     i <-  i + 1
     filename <- paste(tempdir(),
+                      "\\",
                       format(Sys.Date(), "%g%m%d"),
                       "_temp_",
                       i,
@@ -70,8 +71,14 @@ xlsxglimpse <- function(df) {
   }
 
   openxlsx::saveWorkbook(wb,
-               file = filename)
-
-  PBSmodelling::openFile(filename)
+                         file = filename)
+  
+  # PBSmodelling::openFile(filename)
+  
+  open_command <- switch(Sys.info()[['sysname']],
+                         Windows= 'open',
+                         Linux = 'xdg-open',
+                         Darwin = 'open')
+  system(paste(open_command, temp_file))
 
 }
