@@ -79,6 +79,6 @@ xlsxglimpse <- function(df) {
                          Windows= 'open',
                          Linux = 'xdg-open',
                          Darwin = 'open')
-  system(paste(open_command, temp_file))
+  system(paste(open_command, filename))
 
 }
